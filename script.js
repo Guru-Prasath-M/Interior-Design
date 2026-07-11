@@ -191,3 +191,214 @@ document
         });
 
     });
+
+
+
+
+
+
+/*=========================================
+            AOS INITIALIZATION
+=========================================*/
+
+AOS.init({
+
+    duration: 1000,
+
+    easing: "ease-in-out",
+
+    once: true,
+
+    offset: 80
+
+});
+
+
+/*=========================================
+            ABOUT SWIPER
+=========================================*/
+
+const aboutSwiper = new Swiper(".aboutSwiper", {
+
+    loop: true,
+
+    speed: 1200,
+
+    effect: "fade",
+
+    fadeEffect: {
+        crossFade: true
+    },
+
+    autoplay: {
+
+        delay: 3500,
+
+        disableOnInteraction: false
+
+    },
+
+    pagination: {
+
+        el: ".swiper-pagination",
+
+        clickable: true
+
+    }
+
+});
+
+
+/*=========================================
+        STATISTICS COUNTER
+=========================================*/
+
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (!entry.isIntersecting) return;
+
+        const counter = entry.target;
+
+        const target = parseInt(counter.innerText);
+
+        let current = 0;
+
+        const increment = target / 120;
+
+        function updateCounter() {
+
+            current += increment;
+
+            if (current < target) {
+
+                counter.innerText = Math.ceil(current);
+
+                requestAnimationFrame(updateCounter);
+
+            } else {
+
+                counter.innerText = target;
+
+            }
+
+        }
+
+        updateCounter();
+
+        counterObserver.unobserve(counter);
+
+    });
+
+}, {
+
+    threshold: 0.5
+
+});
+
+counters.forEach(counter => {
+
+    counterObserver.observe(counter);
+
+});
+
+
+/*=========================================
+        IMAGE HOVER ZOOM
+=========================================*/
+
+const images = document.querySelectorAll(".aboutSwiper img");
+
+images.forEach(image => {
+
+    image.addEventListener("mouseenter", () => {
+
+        image.style.transform = "scale(1.08)";
+
+    });
+
+    image.addEventListener("mouseleave", () => {
+
+        image.style.transform = "scale(1)";
+
+    });
+
+});
+
+
+/*=========================================
+      FLOATING EXPERIENCE CARD
+=========================================*/
+
+const experienceBox = document.querySelector(".experience-box");
+
+if (experienceBox) {
+
+    window.addEventListener("scroll", () => {
+
+        const offset = window.pageYOffset;
+
+        experienceBox.style.transform =
+            `translateY(${offset * 0.04}px)`;
+
+    });
+
+}
+
+
+/*=========================================
+         BUTTON HOVER EFFECT
+=========================================*/
+
+const aboutBtn = document.querySelector(".about-btn");
+
+if (aboutBtn) {
+
+    aboutBtn.addEventListener("mouseenter", () => {
+
+        aboutBtn.style.boxShadow =
+            "0 18px 40px rgba(198,166,106,.25)";
+
+    });
+
+    aboutBtn.addEventListener("mouseleave", () => {
+
+        aboutBtn.style.boxShadow = "none";
+
+    });
+
+}
+
+
+/*=========================================
+      FEATURE ITEMS ANIMATION
+=========================================*/
+
+const featureItems = document.querySelectorAll(".feature");
+
+featureItems.forEach((item, index) => {
+
+    item.style.transitionDelay = `${index * 0.1}s`;
+
+});
+
+
+/*=========================================
+         IMAGE PARALLAX
+=========================================*/
+
+const aboutImage = document.querySelector(".about-image");
+
+window.addEventListener("scroll", () => {
+
+    if (!aboutImage) return;
+
+    const scrollValue = window.scrollY;
+
+    aboutImage.style.transform =
+        `translateY(${scrollValue * 0.05}px)`;
+
+});
