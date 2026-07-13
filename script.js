@@ -206,7 +206,7 @@ AOS.init({
 
     easing: "ease-in-out",
 
-    offset: 80
+    offset: 80  
 
 });
 
