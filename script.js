@@ -131,32 +131,6 @@ window.addEventListener("scroll", () => {
 
 
 
-// ========================================
-// ACTIVE NAVIGATION
-// ========================================
-
-const navLinks =
-    document.querySelectorAll(".main-navbar .nav-link");
-
-
-navLinks.forEach(link => {
-
-    link.addEventListener("click", function () {
-
-        navLinks.forEach(item =>
-            item.classList.remove("active")
-        );
-
-
-        if (!this.classList.contains("dropdown-toggle")) {
-
-            this.classList.add("active");
-
-        }
-
-    });
-
-});
 
 
 
@@ -214,191 +188,91 @@ AOS.init({
 });
 
 
+
+
+
+
+
+
 /*=========================================
-            ABOUT SWIPER
+            AOS
 =========================================*/
 
-const aboutSwiper = new Swiper(".aboutSwiper", {
+AOS.init({
+
+    duration: 1000,
+
+    once: true,
+
+    easing: "ease-in-out",
+
+    offset: 80
+
+});
+
+
+/*=========================================
+        SERVICES SWIPER
+=========================================*/
+
+const servicesSwiper = new Swiper(".servicesSwiper", {
 
     loop: true,
 
-    speed: 1200,
+    speed: 1000,
 
-    effect: "fade",
+    spaceBetween: 30,
 
-    fadeEffect: {
-        crossFade: true
-    },
+    grabCursor: true,
 
     autoplay: {
 
-        delay: 3500,
+        delay: 2500,
 
-        disableOnInteraction: false
+        disableOnInteraction: false,
 
     },
 
     pagination: {
 
-        el: ".swiper-pagination",
+        el: ".servicesSwiper .swiper-pagination",
 
-        clickable: true
+        clickable: true,
 
-    }
+    },
 
-});
+    breakpoints: {
 
+        0: {
 
-/*=========================================
-        STATISTICS COUNTER
-=========================================*/
+            slidesPerView: 1
 
-const counters = document.querySelectorAll(".counter");
+        },
 
-const counterObserver = new IntersectionObserver((entries) => {
+        576: {
 
-    entries.forEach(entry => {
+            slidesPerView: 1.2
 
-        if (!entry.isIntersecting) return;
+        },
 
-        const counter = entry.target;
+        768: {
 
-        const target = parseInt(counter.innerText);
+            slidesPerView: 2
 
-        let current = 0;
+        },
 
-        const increment = target / 120;
+        992: {
 
-        function updateCounter() {
+            slidesPerView: 3
 
-            current += increment;
+        },
 
-            if (current < target) {
+        1400: {
 
-                counter.innerText = Math.ceil(current);
-
-                requestAnimationFrame(updateCounter);
-
-            } else {
-
-                counter.innerText = target;
-
-            }
+            slidesPerView: 3
 
         }
 
-        updateCounter();
-
-        counterObserver.unobserve(counter);
-
-    });
-
-}, {
-
-    threshold: 0.5
-
-});
-
-counters.forEach(counter => {
-
-    counterObserver.observe(counter);
-
-});
-
-
-/*=========================================
-        IMAGE HOVER ZOOM
-=========================================*/
-
-const images = document.querySelectorAll(".aboutSwiper img");
-
-images.forEach(image => {
-
-    image.addEventListener("mouseenter", () => {
-
-        image.style.transform = "scale(1.08)";
-
-    });
-
-    image.addEventListener("mouseleave", () => {
-
-        image.style.transform = "scale(1)";
-
-    });
-
-});
-
-
-/*=========================================
-      FLOATING EXPERIENCE CARD
-=========================================*/
-
-const experienceBox = document.querySelector(".experience-box");
-
-if (experienceBox) {
-
-    window.addEventListener("scroll", () => {
-
-        const offset = window.pageYOffset;
-
-        experienceBox.style.transform =
-            `translateY(${offset * 0.04}px)`;
-
-    });
-
-}
-
-
-/*=========================================
-         BUTTON HOVER EFFECT
-=========================================*/
-
-const aboutBtn = document.querySelector(".about-btn");
-
-if (aboutBtn) {
-
-    aboutBtn.addEventListener("mouseenter", () => {
-
-        aboutBtn.style.boxShadow =
-            "0 18px 40px rgba(198,166,106,.25)";
-
-    });
-
-    aboutBtn.addEventListener("mouseleave", () => {
-
-        aboutBtn.style.boxShadow = "none";
-
-    });
-
-}
-
-
-/*=========================================
-      FEATURE ITEMS ANIMATION
-=========================================*/
-
-const featureItems = document.querySelectorAll(".feature");
-
-featureItems.forEach((item, index) => {
-
-    item.style.transitionDelay = `${index * 0.1}s`;
-
-});
-
-
-/*=========================================
-         IMAGE PARALLAX
-=========================================*/
-
-const aboutImage = document.querySelector(".about-image");
-
-window.addEventListener("scroll", () => {
-
-    if (!aboutImage) return;
-
-    const scrollValue = window.scrollY;
-
-    aboutImage.style.transform =
-        `translateY(${scrollValue * 0.05}px)`;
+    }
 
 });
