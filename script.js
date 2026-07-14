@@ -276,3 +276,56 @@ const servicesSwiper = new Swiper(".servicesSwiper", {
     }
 
 });
+
+
+
+
+
+
+const designStyleSwiper = new Swiper(".designStyleSwiper", {
+
+    loop: true,
+
+    speed: 900,
+
+    spaceBetween: 30,
+
+    autoplay: {
+
+        delay: 3000,
+
+        disableOnInteraction: false,
+
+    },
+
+    pagination: {
+
+        el: ".designStyleSwiper .swiper-pagination",
+
+        clickable: true,
+
+    },
+
+    breakpoints: {
+
+        0: {
+
+            slidesPerView: 1
+
+        },
+
+        768: {
+
+            slidesPerView: 2
+
+        },
+
+        1200: {
+
+            slidesPerView: 3
+
+        }
+
+    }
+
+});
