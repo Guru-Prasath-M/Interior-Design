@@ -405,6 +405,150 @@ button {
 }
 
 
+
+
+/*=========================================
+        FLOATING CONTACT
+=========================================*/
+
+.floating-contact{
+
+    position: fixed;
+
+    right: 18px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    z-index: 9999;
+
+}
+
+.floating-btn{
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    font-size: 20px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+
+    transition: .35s;
+
+}
+
+/* WhatsApp */
+
+.whatsapp-btn{
+
+    background: #25D366;
+
+}
+
+.whatsapp-btn:hover{
+
+    background: #1EBE5D;
+
+    color: #fff;
+
+    transform: scale(1.08);
+
+}
+
+/* Call */
+
+.call-btn{
+
+    background: #C6A66A;
+
+}
+
+.call-btn:hover{
+
+    background: #B69254;
+
+    color: #fff;
+
+    transform: scale(1.08);
+
+}
+
+/*==========================
+        Tablet
+==========================*/
+
+@media (max-width: 992px){
+
+    .floating-contact{
+
+        right: 15px;
+
+    }
+
+    .floating-btn{
+
+        width: 44px;
+
+        height: 44px;
+
+        font-size: 18px;
+
+    }
+
+}
+
+/*==========================
+        Mobile
+==========================*/
+
+@media (max-width: 576px){
+
+    .floating-contact{
+
+        right: 10px;
+
+        gap: 10px;
+
+    }
+
+    .floating-btn{
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+
+
+
+
+
 /* =====================================
    HERO
 ===================================== */
