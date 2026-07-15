@@ -2080,7 +2080,7 @@ font-size:14px;
 
 .services-section{
 
-    padding:100px 0;
+    padding:70px 0;
 
     background:#151714;
 
@@ -2099,6 +2099,7 @@ font-size:14px;
     position:absolute;
 
     width:450px;
+
     height:450px;
 
     border-radius:50%;
@@ -2106,6 +2107,7 @@ font-size:14px;
     background:rgba(198,166,106,.05);
 
     left:-180px;
+
     top:-180px;
 
 }
@@ -2456,7 +2458,7 @@ padding:28px 22px;
 =========================================*/
 
 .services-section{
-    padding:100px 0;
+    padding:70px 0;
     background:#151714;
     position:relative;
     overflow:hidden;
@@ -3485,6 +3487,10 @@ font-size:28px;
 
 }
 
+.footer-section .container h4{
+    color: #C6A66A;
+}
+
 .footer-top{
 
     margin-bottom:70px;
@@ -3495,7 +3501,7 @@ font-size:28px;
 
     font-family:"Playfair Display",serif;
 
-    font-size:50px;
+    font-size:45px;
 
     color:#C6A66A;
 
