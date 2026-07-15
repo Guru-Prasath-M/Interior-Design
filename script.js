@@ -39,7 +39,7 @@ const heroSwiper = new Swiper(".heroSwiper", {
 
     autoplay: {
 
-        delay: 6000,
+        delay: 4000,
 
         disableOnInteraction: false
 
@@ -74,6 +74,45 @@ const heroSwiper = new Swiper(".heroSwiper", {
         }
 
     }
+
+});
+
+
+
+
+
+
+/*=========================================
+        SCROLL TO TOP
+=========================================*/
+
+const scrollBtn = document.getElementById("scrollTop");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 300){
+
+        scrollBtn.classList.add("show");
+
+    }else{
+
+        scrollBtn.classList.remove("show");
+
+    }
+
+});
+
+scrollBtn.addEventListener("click", function(e){
+
+    e.preventDefault();
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
 
 });
 

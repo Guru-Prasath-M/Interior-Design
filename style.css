@@ -182,7 +182,7 @@ button {
 
     font-family: "Playfair Display", serif;
 
-    font-size: 20px;
+    font-size: 24px;
 
     font-weight: 500;
 
@@ -194,7 +194,7 @@ button {
 
     margin-top: 6px;
 
-    font-size: 7px;
+    font-size: 9px;
 
     letter-spacing: 3.2px;
 
@@ -542,6 +542,113 @@ button {
     }
 
 }
+
+
+
+
+
+/*=========================================
+        SCROLL TO TOP
+=========================================*/
+
+.scroll-top{
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 25px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #C6A66A;
+
+    color: #151714;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .35s;
+
+    z-index: 9999;
+
+}
+
+.scroll-top.show{
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.scroll-top:hover{
+
+    background: #ffffff;
+
+    color: #151714;
+
+    transform: translateY(-5px);
+
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+    .scroll-top{
+
+        width:44px;
+
+        height:44px;
+
+        right:18px;
+
+        bottom:20px;
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:576px){
+
+    .scroll-top{
+
+        width:40px;
+
+        height:40px;
+
+        right:15px;
+
+        bottom:18px;
+
+        font-size:18px;
+
+    }
+
+}
+
+
+
 
 
 
