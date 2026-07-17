@@ -281,7 +281,7 @@ button {
 
     transition: .3s;
 
-    font-size: 13px;
+    font-size: 15px;
 
     font-weight: 500;
 
@@ -349,7 +349,7 @@ button {
 
     border-radius:18px;
 
-    background:#fff;
+    background:#000000;
 
     border:1px solid var(--border);
 
@@ -422,7 +422,7 @@ button {
 
     border-radius: 50px;
 
-    font-size: 12px;
+    font-size: 15px;
 
     transition: all 0.3s ease;
 }
@@ -440,7 +440,7 @@ button {
 
     border-radius: 50%;
 
-     background:var(--accent);
+    background:var(--accent);
 
     color:#fff;
 
@@ -604,6 +604,7 @@ button {
     }
 
 }
+
 
 
 
@@ -1361,11 +1362,14 @@ button {
         position: relative;
 
         width: 48px;
+
         height: 48px;
 
         padding: 0;
 
         border: 1px solid rgba(255, 255, 255, 0.4);
+
+        background-color: #C6A66A;
 
         border-radius: 50%;
     }
@@ -1384,6 +1388,7 @@ button {
         left: 50%;
 
         width: 18px;
+
         height: 1px;
 
         background: var(--white);
@@ -1410,7 +1415,7 @@ button {
 
         padding: 25px;
 
-        background: rgba(20, 22, 18, 0.98);
+        /* background: rgba(20, 22, 18, 0.98); */
 
         backdrop-filter: blur(20px);
 
@@ -2299,11 +2304,9 @@ font-size:14px;
 
 .service-card:hover{
 
-    transform:translateY(-12px);
-
     border-color:var(--accent);
 
-    transform:translateY(-10px);
+    transform:translateY(0px);
 
     box-shadow:0 25px 50px rgba(0,0,0,.12);
 
@@ -3298,7 +3301,7 @@ display:none;
 
     background:var(--section-alt);
 
-    border-radius: 25px;
+    border-radius: 20px;
 
 }
 
@@ -3328,8 +3331,6 @@ display:none;
 
     padding:24px 28px;
 
-    box-shadow:var(--shadow);
-
 }
 
 .accordion-button:not(.collapsed){
@@ -3342,7 +3343,7 @@ display:none;
 
 .accordion-button:focus{
 
-    box-shadow:var(--shadow);
+    box-shadow: none;
 
 }
 
@@ -3373,8 +3374,6 @@ display:none;
 }
 
 .accordion-item:hover{
-
-    border-color:#C6A66A;
 
     transition:.35s;
 
