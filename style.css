@@ -108,23 +108,21 @@ button {
    NAVBAR
 ===================================== */
 
-.main-navbar {
+.main-navbar{
 
     position: fixed;
+
+    width: 100%;
 
     top: 0;
     left: 0;
 
-    width: 100%;
+    background: transparent;
 
-    z-index: 1000;
+    transition: .4s ease;
 
-    padding: 24px 0;
+    z-index: 9999;
 
-    transition:
-        background 0.4s ease,
-        padding 0.4s ease,
-        backdrop-filter 0.4s ease;
 }
 
 
@@ -134,19 +132,33 @@ button {
 
     padding: 14px 0;
 
-   background:rgba(255,255,255,.92);
+    background: rgba(255,255,255,.96);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter: blur(18px);
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
 
     border-bottom:1px solid var(--border);
 
-    box-shadow:0 5px 30px rgba(0,0,0,.05);
 }
 
 
 /* =====================================
    LOGO
 ===================================== */
+
+.main-navbar.scrolled .navbar-brand{
+
+    color: #2F2A24;
+
+}
+
+
+.main-navbar .navbar-brand{
+
+    color: #fff;
+
+}
 
 .brand-logo {
 
@@ -234,6 +246,21 @@ button {
 }
 
 
+/* Nav Links */
+
+.main-navbar.scrolled .nav-link{
+
+    color: #2F2A24 !important;
+
+}
+
+.main-navbar.scrolled .nav-link:hover{
+
+    color: var(--accent) !important;
+
+}
+
+
 /* =====================================
    NAVIGATION
 ===================================== */
@@ -250,22 +277,22 @@ button {
 
     padding: 10px 0 !important;
 
-    color:var(--text-light)!important;
+    color: #fff !important;
+
+    transition: .3s;
 
     font-size: 13px;
 
     font-weight: 500;
 
     letter-spacing: 0.3px;
-
-    transition: color 0.3s ease;
 }
 
 
 .main-navbar .nav-link:hover,
 .main-navbar .nav-link.active {
 
-    color:var(--dark)!important;
+    color: var(--accent) !important;
 }
 
 
