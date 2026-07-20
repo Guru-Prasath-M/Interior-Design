@@ -368,3 +368,12 @@ const designStyleSwiper = new Swiper(".designStyleSwiper", {
     }
 
 });
+
+
+
+
+
+
+
+
+

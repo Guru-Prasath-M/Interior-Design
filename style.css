@@ -349,7 +349,7 @@ button {
 
     border-radius:18px;
 
-    background:#000000;
+    background:#fff;
 
     border:1px solid var(--border);
 
@@ -396,6 +396,40 @@ button {
     color:var(--accent);
 
     padding-left:20px;
+
+}
+
+
+
+/* Hide Services dropdown by default */
+
+@media (max-width:991px){
+
+    .dropdown-menu{
+
+        display:none !important;
+
+        position:static;
+
+        width:100%;
+
+        background:transparent;
+
+        border:none;
+
+        box-shadow:none;
+
+        padding:8px 0 0 20px;
+
+        margin:0;
+
+    }
+
+    .dropdown-menu.show{
+
+        display:block !important;
+
+    }
 
 }
 
@@ -3331,6 +3365,8 @@ display:none;
 
     padding:24px 28px;
 
+    border-bottom: none !important;
+
 }
 
 .accordion-button:not(.collapsed){
@@ -3693,7 +3729,7 @@ font-size:28px;
 
 .footer-social a:hover{
 
-    background:var(--accent);
+    background: black;
 
     color:#FFFFFF;
 
@@ -3702,6 +3738,7 @@ font-size:28px;
 .footer-contact-box{
 
     margin-top:50px;
+    
     margin-bottom:0;
 
     background:rgb(238 236 236);
@@ -3728,11 +3765,11 @@ font-size:28px;
 
     height:60px;
 
+    min-width:60px;
+
+    min-height:60px;
+
     border-radius:50%;
-
-    background:var(--accent);
-
-    color:#fff;
 
     display:flex;
 
@@ -3740,7 +3777,13 @@ font-size:28px;
 
     align-items:center;
 
-    font-size:24px;
+    background:var(--accent);
+
+    color:#fff;
+
+    font-size:26px;
+
+    flex-shrink:0;
 
 }
 
@@ -3776,3 +3819,52 @@ font-size:28px;
 
 }
 
+
+
+
+
+@media (max-width:991px){
+
+.contact-box i{
+
+    width:55px;
+
+    height:55px;
+
+    min-width:55px;
+
+    min-height:55px;
+
+    font-size:24px;
+
+}
+
+}
+
+
+
+@media (max-width:576px){
+
+.contact-box{
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}
+
+.contact-box i{
+
+    width:48px;
+
+    height:48px;
+
+    min-width:48px;
+
+    min-height:48px;
+
+    font-size:20px;
+
+}
+
+}
